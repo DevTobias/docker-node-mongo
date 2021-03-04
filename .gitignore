@@ -1,0 +1,37 @@
+# dependencies
+node_modules
+
+# Testing, Coverage
+coverage
+
+# Secruity
+*.env
+
+# Compiled output
+dist
+tmp
+out-tsc
+
+# Development
+.todo
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Misc
+.sass-cache
+connect.lock
+libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+typings
+
+# System Files
+.DS_Store
+Thumbs.db

@@ -11,7 +11,7 @@ import validAdd from '../utils/valid';
 
 //* ------------------ CONFIGURATION ------------------ *\\
 
-const authRouter: Router = express.Router();
+const itemRouter: Router = express.Router();
 
 //* --------------------- ROUTES ---------------------- *\\
 
@@ -24,7 +24,7 @@ const authRouter: Router = express.Router();
  * @param {callback} middleware - Express middleware.
  * @param {callback} callback - Express callback.
  */
-authRouter.post('/add', validAdd, addController);
+itemRouter.post('/add', validAdd, addController);
 
 /**
  * Fetches all items from the database.
@@ -35,8 +35,8 @@ authRouter.post('/add', validAdd, addController);
  * @param {callback} middleware - Express middleware.
  * @param {callback} callback - Express callback.
  */
-authRouter.get('/get', getController);
+itemRouter.get('/get', getController);
 
 //* --------------------- EXPORTS --------------------- *\\
 
-export default authRouter;
+export default itemRouter;

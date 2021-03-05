@@ -43,7 +43,7 @@ mongoose
 //* --------------------- ROUTES ---------------------- *\\
 
 //* User Authentification routes
-app.use('/api/auth/user', itemRouter);
+app.use('/api/item', itemRouter);
 
 //* Homepage route
 app.get('/', (_req: Request, res: Response) =>

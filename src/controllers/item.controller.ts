@@ -63,12 +63,16 @@ async function addController(req: Request, res: Response) {
 async function getController(_req: Request, res: Response) {
   //* Try to fetch all items
   try {
-    const items = Item.find();
-
-    return res.status(200).json({
-      success: true,
-      items,
-    });
+    return Item.find()
+      .then((items) =>
+        res.status(200).json({
+          success: true,
+          items,
+        })
+      )
+      .catch(() =>
+        res.status(500).json({ success: false, message: 'no items found' })
+      );
   } catch (error) {
     console.error('an error occured in add item route: ', error);
     return res

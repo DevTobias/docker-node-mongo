@@ -18,7 +18,6 @@ out-tsc
 .history/*
 
 # Misc
-.sass-cache
 connect.lock
 libpeerconnection.log
 npm-debug.log

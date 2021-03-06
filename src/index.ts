@@ -27,7 +27,10 @@ app.use(cors());
 //* --------------- DATABASE CONNECTION --------------- *\\
 
 mongoose
-  .connect(process.env.ATLAS_URI || '', {
+  .connect(process.env.MONGO_URL || '', {
+    authSource: 'admin',
+    user: process.env.MONGO_USER || '',
+    pass: process.env.MONGO_PASSWORD || '',
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
